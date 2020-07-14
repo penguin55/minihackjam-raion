@@ -51,4 +51,20 @@ public class PlayerController : PlayerBehaviour
 
         Move();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag.Equals("Finish"))
+        {
+            this.transform.parent = collision.collider.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag.Equals("Finish"))
+        {
+            this.transform.parent = null;
+        }
+    }
 }
