@@ -59,3 +59,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 Minihackjam/Temp/UnityLockfile
+Minihackjam/Library/assetDatabase3
+*.dll
