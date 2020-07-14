@@ -12,6 +12,7 @@ public class PlayerInfo : MonoBehaviour
     public void UpdateType()
     {
         activePlayerData = playersData[activeIndex];
+        Debug.Log("Aku sekarang "+ playersData[activeIndex].characterName);
     }
 
     public void GetNextType()
@@ -21,7 +22,6 @@ public class PlayerInfo : MonoBehaviour
         if (activeIndex >= playersData.Length) activeIndex = 0;
 
         UpdateType();
-        Debug.Log(activePlayerData.characterName);
     }
 }
 
