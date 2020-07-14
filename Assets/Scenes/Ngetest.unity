@@ -345,6 +345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 1416301038}
   rigid: {fileID: 1416301039}
+  timeToAccelerate: 1
+  timeToStop: 0.3
   moveRight: 100
   moveLeft: 97
   jump: 32
@@ -365,12 +367,12 @@ MonoBehaviour:
   - type: 0
     characterName: Anak-anak
     movementSpeed: 5
-    jumpPower: 750
+    jumpPower: 75
     starCollects: 0
   - type: 1
     characterName: Remaja
     movementSpeed: 5
-    jumpPower: 500
+    jumpPower: 50
     starCollects: 0
   - type: 2
     characterName: Dewasa
@@ -389,7 +391,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
