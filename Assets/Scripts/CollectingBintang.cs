@@ -5,12 +5,13 @@ using UnityEngine;
 public class CollectingBintang : MonoBehaviour
 {
     public PlayerData.Type usiaBintang;
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.collider.tag == "Player")
+        if (collision.tag == "Player")
         {
             PlayerBehaviour player = collision.gameObject.GetComponent<PlayerBehaviour>();
-            if(player.GetPlayerType() == usiaBintang)
+            if (player.GetPlayerType() == usiaBintang)
             {
                 player.AddStar();
                 Destroy(this.gameObject);
