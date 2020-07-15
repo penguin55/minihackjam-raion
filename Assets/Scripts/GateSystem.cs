@@ -15,6 +15,7 @@ public class GateSystem : MonoBehaviour
             Debug.Log("menang");
             sr = collision.gameObject.GetComponent<SpriteRenderer>();
             StartCoroutine("FadeOut");
+            player.nullStar();
         }
     }
 
