@@ -43,12 +43,6 @@ public class PlayerController : PlayerBehaviour
             directionMove += Vector2.right;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            // section ini cuma dummy
-            GetNextType();
-        }
-
         Move();
     }
 
