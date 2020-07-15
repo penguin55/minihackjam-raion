@@ -121,6 +121,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &413028506
 =======
 --- !u!1 &51935005
@@ -478,6 +479,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 153501357}
   m_CullTransparentMesh: 0
 >>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
+=======
+>>>>>>> parent of f5f6eff... minor changes
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +687,7 @@ GameObject:
   - component: {fileID: 1416301042}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -847,6 +850,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1992012731
 PrefabInstance:
@@ -1054,3 +1058,5 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 >>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
+=======
+>>>>>>> parent of f5f6eff... minor changes
