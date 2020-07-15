@@ -28,6 +28,11 @@ public class PlayerBehaviour : MonoBehaviour
         info.ActivePlayerData.starCollects++;
     }
 
+    public int checkStar()
+    {
+        return info.ActivePlayerData.starCollects;
+    }
+
     public PlayerData.Type GetPlayerType()
     {
         return info.ActivePlayerData.type;
