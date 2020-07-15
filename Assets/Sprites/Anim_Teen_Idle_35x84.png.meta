@@ -1,7 +1,28 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e77e5ce2b4c9a824c967884b7ceb3249
 TextureImporter:
   internalIDToNameTable: []
+=======
+guid: 83273afa196cd6647bbd3d3b4ecc88a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2991930845889900792
+    second: Anim_Teen_Idle_35x84_0
+  - first:
+      213: 7269311036010371778
+    second: Anim_Teen_Idle_35x84_1
+  - first:
+      213: 4696785914508577284
+    second: Anim_Teen_Idle_35x84_2
+  - first:
+      213: -1060904027366283829
+    second: Anim_Teen_Idle_35x84_3
+  - first:
+      213: 394878118696293312
+    second: Anim_Teen_Idle_35x84_4
+>>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +52,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: -1
+=======
+    filterMode: 0
+>>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +65,20 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 32
+>>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +103,132 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anim_Teen_Idle_35x84_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 87
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69d05f4b6d2c9e448aeb44b114f928a
+      internalID: 2991930845889900792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Teen_Idle_35x84_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 87
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09c6fce63e2bc546bb07806b339de28
+      internalID: 7269311036010371778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Teen_Idle_35x84_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 87
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13ed5202a740624dab5030b9d373e5d
+      internalID: 4696785914508577284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Teen_Idle_35x84_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 29
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6298897b2cfd842afedeaabf24b1cf
+      internalID: -1060904027366283829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Teen_Idle_35x84_4
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 3
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caffca52d28e36468847cfd40270d76
+      internalID: 394878118696293312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> 3e33adbf7b7b7f22ddf5550d96c97f63a59955b7
     outline: []
     physicsShape: []
     bones: []
