@@ -14,6 +14,7 @@ public class CollectingBintang : MonoBehaviour
             if (player.GetPlayerType() == usiaBintang)
             {
                 player.AddStar();
+                AudioManager.Instance.PlaySFX("Collect");
                 Destroy(this.gameObject);
             }
         }

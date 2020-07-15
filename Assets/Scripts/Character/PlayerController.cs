@@ -42,6 +42,7 @@ public class PlayerController : PlayerBehaviour
             if (directionMove != Vector2.left) timeMoveElapsed = 0;
 
             directionMove = Vector2.left;
+            Facing(-1);
         }
 
         if (Input.GetKeyUp(moveLeft))
@@ -59,6 +60,7 @@ public class PlayerController : PlayerBehaviour
             if (directionMove != Vector2.right) timeMoveElapsed = 0;
 
             directionMove = Vector2.right;
+            Facing(1);
         }
 
         if (Input.GetKeyUp(moveRight))
@@ -85,11 +87,13 @@ public class PlayerController : PlayerBehaviour
         if (Input.GetKey(moveLeft))
         {
             directionMove += Vector2.left;
+            Facing(-1);
         }
 
         if (Input.GetKey(moveRight))
         {
             directionMove += Vector2.right;
+            Facing(1);
         }
 
         MoveLinear();

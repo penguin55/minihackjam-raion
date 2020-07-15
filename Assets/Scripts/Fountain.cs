@@ -13,6 +13,7 @@ public class Fountain : MonoBehaviour
         {
             if (Input.GetKeyDown(keyToChange))
             {
+                AudioManager.Instance.PlaySFX("Transforming");
                 player.GetNextType();
             }
         }

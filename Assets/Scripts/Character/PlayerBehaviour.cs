@@ -4,6 +4,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] protected PlayerInfo info;
     [SerializeField] protected Rigidbody2D rigid;
+    [SerializeField] protected SpriteRenderer sprite;
 
     protected bool isJump;
     protected Vector2 directionMove;
@@ -36,6 +37,19 @@ public class PlayerBehaviour : MonoBehaviour
     protected void Jump()
     {
         rigid.AddForce(Vector2.up * info.ActivePlayerData.jumpPower, ForceMode2D.Impulse);
+    }
+
+    protected void Facing(int direction)
+    {
+        if (direction > 0)
+        {
+            sprite.flipX = false;
+        }
+
+        if (direction < 0)
+        {
+            sprite.flipX = true;
+        }
     }
 
     private void Move(float accelerate)
@@ -85,5 +99,10 @@ public class PlayerBehaviour : MonoBehaviour
     public PlayerData.Type GetPlayerType()
     {
         return info.ActivePlayerData.type;
+    }
+
+    public void WalkAnimationSync()
+    {
+        //AudioManager.Instance.PlaySFX("Walk");
     }
 }
