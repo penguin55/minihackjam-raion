@@ -11,7 +11,7 @@ public class GameManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        TransitionManager.Instance.FadeOut(StartTheGame);
     }
 
     // Update is called once per frame
@@ -32,13 +32,23 @@ public class GameManagement : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        TransitionManager.Instance.FadeIn(RestartTheGame);
     }
 
     public void Quit()
     {
 
+    }
+
+    private void StartTheGame()
+    {
+
+    }
+
+    private void RestartTheGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
