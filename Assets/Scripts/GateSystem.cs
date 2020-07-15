@@ -10,7 +10,7 @@ public class GateSystem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerBehaviour player = collision.gameObject.GetComponent<PlayerBehaviour>();
-        if(player.checkStar() == 3)
+        if(player.checkStar())
         {
             Debug.Log("menang");
             sr = collision.gameObject.GetComponent<SpriteRenderer>();
