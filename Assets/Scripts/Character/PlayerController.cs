@@ -5,6 +5,8 @@ public class PlayerController : PlayerBehaviour
     [SerializeField] private KeyCode moveLeft = KeyCode.A;
     [SerializeField] private KeyCode jump = KeyCode.Space;
 
+    private bool withAccelerate = true;
+
     private void Start()
     {
         info.UpdateType();
@@ -12,7 +14,10 @@ public class PlayerController : PlayerBehaviour
 
     void Update()
     {
-        Controller();
+        if (withAccelerate) ControllerWithAccelerate();
+        else ControllerWithoutAccelerate();
+
+        if (Input.GetKeyDown(KeyCode.V)) withAccelerate = !withAccelerate;
     }
 
     private void FixedUpdate()
@@ -24,7 +29,51 @@ public class PlayerController : PlayerBehaviour
         }
     }
 
-    void Controller()
+    void ControllerWithAccelerate()
+    {
+        if (Input.GetKeyDown(jump))
+        {
+            isJump = true;
+        }
+
+        if (Input.GetKey(moveLeft))
+        {
+            isAccelerating = true;
+            if (directionMove != Vector2.left) timeMoveElapsed = 0;
+
+            directionMove = Vector2.left;
+        }
+
+        if (Input.GetKeyUp(moveLeft))
+        {
+            if (isAccelerating && directionMove == Vector2.left)
+            {
+                isAccelerating = false;
+                if (timeMoveElapsed > timeToStop) timeMoveElapsed = timeToStop;
+            }
+        }
+
+        if (Input.GetKey(moveRight))
+        {
+            isAccelerating = true;
+            if (directionMove != Vector2.right) timeMoveElapsed = 0;
+
+            directionMove = Vector2.right;
+        }
+
+        if (Input.GetKeyUp(moveRight))
+        {
+            if (isAccelerating && directionMove == Vector2.right)
+            {
+                isAccelerating = false;
+                if (timeMoveElapsed > timeToStop) timeMoveElapsed = timeToStop;
+            }
+        }
+
+        MoveAccelerate();
+    }
+
+    void ControllerWithoutAccelerate()
     {
         if (Input.GetKeyDown(jump))
         {
@@ -43,7 +92,7 @@ public class PlayerController : PlayerBehaviour
             directionMove += Vector2.right;
         }
 
-        Move();
+        MoveLinear();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
