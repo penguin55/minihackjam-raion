@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class Fountain : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private KeyCode keyToChange;
+    private PlayerBehaviour player;
+
+    private void Update()
     {
-        
+        if (player != null)
+        {
+            if (Input.GetKeyDown(keyToChange))
+            {
+                player.GetNextType();
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            player = collision.GetComponent<PlayerBehaviour>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player = null;
+        }
     }
 }
