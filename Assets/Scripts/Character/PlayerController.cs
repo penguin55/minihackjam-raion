@@ -48,7 +48,7 @@ public class PlayerController : PlayerBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag.Equals("Finish"))
+        if (collision.collider.tag.Equals("Moving"))
         {
             this.transform.parent = collision.collider.transform;
         }
@@ -56,7 +56,7 @@ public class PlayerController : PlayerBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.tag.Equals("Finish"))
+        if (collision.collider.tag.Equals("Moving"))
         {
             this.transform.parent = null;
         }
