@@ -8,6 +8,7 @@ public class PlayerInfo : MonoBehaviour
     [SerializeField] private PlayerData[] playersData;
 
     public PlayerData ActivePlayerData { get { return activePlayerData; } }
+    public PlayerData[] PlayersData { get { return playersData; } }
 
     public void UpdateType()
     {

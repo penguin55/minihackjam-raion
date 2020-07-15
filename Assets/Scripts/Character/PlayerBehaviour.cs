@@ -28,9 +28,14 @@ public class PlayerBehaviour : MonoBehaviour
         info.ActivePlayerData.starCollects++;
     }
 
-    public int checkStar()
+    public bool checkStar()
     {
-        return info.ActivePlayerData.starCollects;
+        foreach (PlayerData dataInfo in info.PlayersData)
+        {
+            if (dataInfo.starCollects == 0) return false;
+        }
+
+        return true;
     }
 
     public void nullStar()
