@@ -6,7 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] protected Rigidbody2D rigid;
     [SerializeField] protected SpriteRenderer renderer;
     [SerializeField] protected Animator animator;
-
+    [SerializeField] protected ParticleSystem partikel;
 
     protected bool isJump;
     protected Vector2 directionMove;
@@ -101,6 +101,8 @@ public class PlayerBehaviour : MonoBehaviour
         animator.runtimeAnimatorController = info.ActivePlayerData.animator;
 
         animator.SetBool("Idle", true);
+
+        partikel.Play();
     }
 
     public void AddStar()
@@ -133,4 +135,10 @@ public class PlayerBehaviour : MonoBehaviour
         //AudioManager.Instance.PlaySFX("Walk");
         //Baru dummy
     }
+
+    public bool getFacing()
+    {
+        return renderer.flipX;
+    }
+
 }

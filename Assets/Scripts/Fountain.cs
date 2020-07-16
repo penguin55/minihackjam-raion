@@ -5,7 +5,6 @@ using UnityEngine;
 public class Fountain : MonoBehaviour
 {
     [SerializeField] private KeyCode keyToChange;
-    [SerializeField] private ParticleManager particleChange;
     private PlayerBehaviour player;
 
     private void Update()
@@ -16,7 +15,6 @@ public class Fountain : MonoBehaviour
             {
                 AudioManager.Instance.PlaySFX("Transforming");
                 player.GetNextType();
-                particleChange.enabled = true;
             }
         }
     }
