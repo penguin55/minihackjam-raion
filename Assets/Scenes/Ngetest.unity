@@ -1663,7 +1663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 1416301038}
   rigid: {fileID: 1416301039}
-  sprite: {fileID: 1416301040}
+  renderer: {fileID: 1416301040}
+  animator: {fileID: 1416301043}
   timeToAccelerate: 1
   timeToStop: 0.3
   moveRight: 100
@@ -1684,16 +1685,25 @@ MonoBehaviour:
   activeIndex: 0
   playersData:
   - type: 0
+    defaultSprite: {fileID: 5664942391732503558, guid: 58a31227ce4f9f04b8f232e65822da21,
+      type: 3}
+    animator: {fileID: 9100000, guid: caceae2cdc3cba449ad30f273577d103, type: 2}
     characterName: Anak-anak
     movementSpeed: 5
     jumpPower: 90
     starCollects: 0
   - type: 1
+    defaultSprite: {fileID: 2991930845889900792, guid: e77e5ce2b4c9a824c967884b7ceb3249,
+      type: 3}
+    animator: {fileID: 9100000, guid: 38d58da1459964646ac8103e8e331975, type: 2}
     characterName: Remaja
     movementSpeed: 5
     jumpPower: 60
     starCollects: 0
   - type: 2
+    defaultSprite: {fileID: -8655654591688036906, guid: d80b5003272555f498d08ca1c835ddd7,
+      type: 3}
+    animator: {fileID: 9100000, guid: 35a8e6aa1bcb67a449c2a4932f72f205, type: 2}
     characterName: Dewasa
     movementSpeed: 5
     jumpPower: 0
@@ -1800,8 +1810,8 @@ BoxCollider2D:
   m_Offset: {x: 0.02748084, y: -0.36428654}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.69}
-    oldSize: {x: 1.4583334, y: 1.75}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.9722222, y: 1.1666666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1820,7 +1830,7 @@ Animator:
   m_GameObject: {fileID: 1416301036}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 757e87a67155a264a81f9dbc9db0aa2a, type: 2}
+  m_Controller: {fileID: 9100000, guid: caceae2cdc3cba449ad30f273577d103, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -13,7 +13,6 @@ public class PlayerInfo : MonoBehaviour
     public void UpdateType()
     {
         activePlayerData = playersData[activeIndex];
-        Debug.Log("Aku sekarang "+ playersData[activeIndex].characterName);
     }
 
     public void GetNextType()
@@ -32,6 +31,8 @@ public class PlayerData
     public enum Type { CHILD = 0, TEEN = 1, ELDER = 2 };
 
     public Type type;
+    public Sprite defaultSprite;
+    public RuntimeAnimatorController animator;
     public string characterName;
     public float movementSpeed;
     public float jumpPower;

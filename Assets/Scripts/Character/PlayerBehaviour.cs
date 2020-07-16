@@ -4,7 +4,8 @@ public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] protected PlayerInfo info;
     [SerializeField] protected Rigidbody2D rigid;
-    [SerializeField] protected SpriteRenderer sprite;
+    [SerializeField] protected SpriteRenderer renderer;
+    [SerializeField] protected Animator animator;
 
     protected bool isJump;
     protected Vector2 directionMove;
@@ -43,18 +44,26 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (direction > 0)
         {
-            sprite.flipX = false;
+            renderer.flipX = false;
         }
 
         if (direction < 0)
         {
-            sprite.flipX = true;
+            renderer.flipX = true;
         }
     }
 
     private void Move(float accelerate)
     {
         transform.Translate(info.ActivePlayerData.movementSpeed * directionMove * Time.deltaTime * accelerate);
+
+        if (accelerate == 0)
+        {
+            animator.SetBool("Idle", true);
+        } else
+        {
+            animator.SetBool("Idle", false);
+        }
     }
 
     private void Accelerate()
@@ -74,6 +83,10 @@ public class PlayerBehaviour : MonoBehaviour
     public void GetNextType()
     {
         info.GetNextType();
+        renderer.sprite = info.ActivePlayerData.defaultSprite;
+        animator.runtimeAnimatorController = info.ActivePlayerData.animator;
+
+        animator.SetBool("Idle", true);
     }
 
     public void AddStar()
