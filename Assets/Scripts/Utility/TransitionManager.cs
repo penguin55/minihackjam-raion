@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class TransitionManager : MonoBehaviour
@@ -39,7 +40,7 @@ public class TransitionManager : MonoBehaviour
             timeElapsed = 0;
             fadeIn = true;
             inFading = true;
-            onComplete.AddListener(action);
+            onComplete.AddListener(action == null? NullHandler : action);
         }
     }
 
@@ -51,7 +52,7 @@ public class TransitionManager : MonoBehaviour
             timeElapsed = timeToFade;
             fadeIn = false;
             inFading = true;
-            onComplete.AddListener(action);
+            onComplete.AddListener(action == null ? NullHandler : action);
         }
     }
 
@@ -67,6 +68,7 @@ public class TransitionManager : MonoBehaviour
                 colorFading.a = timeElapsed / timeToFade;
 
                 if (onComplete != null) onComplete.Invoke();
+                
             }
             else
             {
@@ -83,6 +85,7 @@ public class TransitionManager : MonoBehaviour
                 colorFading.a = timeElapsed / timeToFade;
 
                 if (onComplete != null) onComplete.Invoke();
+
             } else
             {
                 colorFading.a = timeElapsed / timeToFade;
@@ -90,6 +93,11 @@ public class TransitionManager : MonoBehaviour
         }
 
         renderer.color = colorFading;
+    }
+
+    void NullHandler()
+    {
+
     }
 
 }
