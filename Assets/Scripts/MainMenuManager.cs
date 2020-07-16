@@ -5,6 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     private void Start()
     {
+        AudioManager.Instance.PlayBGM("gameplay");
         TransitionManager.Instance.FadeOut(null);
     }
 

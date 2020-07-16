@@ -67,12 +67,14 @@ public class TransitionManager : MonoBehaviour
                 inFading = false;
                 colorFading.a = timeElapsed / timeToFade;
 
+                AudioManager.Instance.PlayBGMFading(1 - (timeElapsed / timeToFade));
+
                 if (onComplete != null) onComplete.Invoke();
-                
             }
             else
             {
                 colorFading.a = timeElapsed / timeToFade;
+                AudioManager.Instance.PlayBGMFading(1 - (timeElapsed / timeToFade));
             }
         } else
         {
@@ -84,11 +86,14 @@ public class TransitionManager : MonoBehaviour
                 inFading = false;
                 colorFading.a = timeElapsed / timeToFade;
 
+                AudioManager.Instance.PlayBGMFading(1 - (timeElapsed / timeToFade));
+
                 if (onComplete != null) onComplete.Invoke();
 
             } else
             {
                 colorFading.a = timeElapsed / timeToFade;
+                AudioManager.Instance.PlayBGMFading(1 - (timeElapsed / timeToFade));
             }
         }
 
