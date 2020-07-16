@@ -43,6 +43,15 @@ public class PlayerBehaviour : MonoBehaviour
         onJump = true;
         rigid.AddForce(Vector2.up * info.ActivePlayerData.jumpPower, ForceMode2D.Impulse);
         animator.SetTrigger("Jump");
+        if(info.ActivePlayerData.type == PlayerData.Type.ELDER)
+        {
+
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX("Jump");
+
+        }
     }
 
     protected void Facing(int direction)

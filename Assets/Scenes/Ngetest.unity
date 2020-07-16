@@ -4344,6 +4344,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4640007898943496017, guid: 678a10e7fbd866e48a556f39d0ab6422,
+        type: 3}
+      propertyPath: sfxClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640007898943496017, guid: 678a10e7fbd866e48a556f39d0ab6422,
+        type: 3}
+      propertyPath: sfxClips.Array.data[3].name
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640007898943496017, guid: 678a10e7fbd866e48a556f39d0ab6422,
+        type: 3}
+      propertyPath: sfxClips.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b30ced7e08860d543b6e41b0e7e969cd, type: 3}
+    - target: {fileID: 4640007898943496017, guid: 678a10e7fbd866e48a556f39d0ab6422,
+        type: 3}
+      propertyPath: sfxClips.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 86f4d568c556f5e49bed48344d827465, type: 3}
     - target: {fileID: 4640007898943496018, guid: 678a10e7fbd866e48a556f39d0ab6422,
         type: 3}
       propertyPath: m_LocalPosition.x
