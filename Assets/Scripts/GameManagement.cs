@@ -12,6 +12,7 @@ public class GameManagement : MonoBehaviour
     void Start()
     {
         TransitionManager.Instance.FadeOut(StartTheGame);
+        AudioManager.Instance.PlayBGM("gameplay");
     }
 
     // Update is called once per frame

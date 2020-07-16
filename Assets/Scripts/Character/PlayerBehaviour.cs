@@ -45,12 +45,11 @@ public class PlayerBehaviour : MonoBehaviour
         animator.SetTrigger("Jump");
         if(info.ActivePlayerData.type == PlayerData.Type.ELDER)
         {
-
+            AudioManager.Instance.PlaySFX("encok");
         }
         else
         {
             AudioManager.Instance.PlaySFX("Jump");
-
         }
     }
 

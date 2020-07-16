@@ -48,7 +48,9 @@ public class AudioManager : MonoBehaviour
     {
         if (bgmClips.Any(e => e.name == name))
         {
-            bgmSource.PlayOneShot(bgmClips.First(e => e.name == name).clip);
+            bgmSource.loop = true;
+            bgmSource.clip = bgmClips.First(e => e.name == name).clip;
+            bgmSource.Play();
         } else
         {
             print(name+" Clip doesn't exist!");
