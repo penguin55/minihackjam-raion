@@ -1,7 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c3993ca46f55a5749ae774b74a7193c7
 TextureImporter:
   internalIDToNameTable: []
+=======
+guid: a4cb5982105929d40a754ce93eff69fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6400249677495921549
+    second: Anim_Teen_jumping_41x84_0
+>>>>>>> 979c7bff66511023ec38c4c3c77dd99e41cde802
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +40,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: -1
+=======
+    filterMode: 0
+>>>>>>> 979c7bff66511023ec38c4c3c77dd99e41cde802
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -45,7 +58,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 36
+>>>>>>> 979c7bff66511023ec38c4c3c77dd99e41cde802
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +87,48 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anim_Teen_jumping_41x84_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 41
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ad4363e1592be40844d6767af8026b
+      internalID: -6400249677495921549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> 979c7bff66511023ec38c4c3c77dd99e41cde802
     outline: []
     physicsShape: []
     bones: []
