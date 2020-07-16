@@ -61,3 +61,8 @@ crashlytics-build.properties
 Minihackjam/Temp/UnityLockfile
 Minihackjam/Library/assetDatabase3
 *.dll
+
+#ART_TEST
+Assets/Prefabs/ART_TEST_TEMPORARY
+Assets/Prefabs/ART_TEST_TEMPORARY.meta
+
