@@ -18,6 +18,8 @@ public class PlayerController : PlayerBehaviour
         else ControllerWithoutAccelerate();
 
         if (Input.GetKeyDown(KeyCode.V)) withAccelerate = !withAccelerate;
+
+        LandingCheck();
     }
 
     private void FixedUpdate()
@@ -31,7 +33,7 @@ public class PlayerController : PlayerBehaviour
 
     void ControllerWithAccelerate()
     {
-        if (Input.GetKeyDown(jump))
+        if (Input.GetKeyDown(jump) && !onJump)
         {
             isJump = true;
         }
@@ -105,6 +107,11 @@ public class PlayerController : PlayerBehaviour
         {
             this.transform.parent = collision.collider.transform;
         }
+
+        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving"))
+        {
+            onGround = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -112,6 +119,11 @@ public class PlayerController : PlayerBehaviour
         if (collision.collider.tag.Equals("Moving"))
         {
             this.transform.parent = null;
+        }
+
+        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving"))
+        {
+            onGround = false;
         }
     }
 }
