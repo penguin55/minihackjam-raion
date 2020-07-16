@@ -130,5 +130,6 @@ public class PlayerBehaviour : MonoBehaviour
     public void WalkAnimationSync()
     {
         //AudioManager.Instance.PlaySFX("Walk");
+        //Baru dummy
     }
 }
