@@ -7,10 +7,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] protected SpriteRenderer renderer;
     [SerializeField] protected Animator animator;
 
+
     protected bool isJump;
     protected Vector2 directionMove;
-    protected bool onJump;
-    protected bool onGround;
 
     protected float timeMoveElapsed;
     protected bool isAccelerating;
@@ -39,9 +38,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     protected void Jump()
     {
-        onJump = true;
         rigid.AddForce(Vector2.up * info.ActivePlayerData.jumpPower, ForceMode2D.Impulse);
-        animator.SetTrigger("Jump");
     }
 
     protected void Facing(int direction)
@@ -54,15 +51,6 @@ public class PlayerBehaviour : MonoBehaviour
         if (direction < 0)
         {
             renderer.flipX = true;
-        }
-    }
-
-    protected void LandingCheck()
-    {
-        if (onGround && onJump && rigid.velocity.y == 0)
-        {
-            onJump = false;
-            animator.SetTrigger("Landing");
         }
     }
 
