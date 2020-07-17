@@ -332,7 +332,7 @@ MonoBehaviour:
   moveRight: 100
   moveLeft: 97
   jump: 32
-  attack: 120
+  attack: 113
 --- !u!95 &5865241139262464377
 Animator:
   serializedVersion: 3
