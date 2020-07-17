@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GateSystem : MonoBehaviour
@@ -16,6 +17,7 @@ public class GateSystem : MonoBehaviour
             sr = collision.gameObject.GetComponent<SpriteRenderer>();
             StartCoroutine("FadeOut");
             player.nullStar();
+            Invoke("toNextLevel", 1.5f);
         }
     }
 
@@ -29,4 +31,10 @@ public class GateSystem : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
+
+    void toNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }
