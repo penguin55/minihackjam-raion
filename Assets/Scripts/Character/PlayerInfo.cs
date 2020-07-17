@@ -37,4 +37,8 @@ public class PlayerData
     public float movementSpeed;
     public float jumpPower;
     public int starCollects;
+
+    [Header("Collider Info")]
+    public Vector2 offset;
+    public Vector2 size;
 }

@@ -11,6 +11,7 @@ public class PlayerController : PlayerBehaviour
     private void Start()
     {
         info.UpdateType();
+        UpdateState();
     }
 
     void Update()
@@ -118,7 +119,7 @@ public class PlayerController : PlayerBehaviour
             this.transform.parent = collision.collider.transform;
         }
 
-        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving"))
+        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving") || collision.collider.tag.Equals("Destructible Object"))
         {
             onGround = true;
         }
@@ -131,7 +132,7 @@ public class PlayerController : PlayerBehaviour
             this.transform.parent = null;
         }
 
-        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving"))
+        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving") || collision.collider.tag.Equals("Destructible Object"))
         {
             onGround = false;
         }

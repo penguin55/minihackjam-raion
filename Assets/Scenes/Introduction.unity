@@ -18153,22 +18153,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1487678807}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &966046884
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966046882}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5273053}
-  m_Size: {x: 0.5059483, y: 0.90550935}
-  m_Direction: 0
 --- !u!1 &984616251
 GameObject:
   m_ObjectHideFlags: 0
@@ -24516,7 +24500,7 @@ PrefabInstance:
     - target: {fileID: 5865241139262464358, guid: 87b03c771a610ba4ca93db97b17c4f5e,
         type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5865241139262464379, guid: 87b03c771a610ba4ca93db97b17c4f5e,
         type: 3}
@@ -24573,8 +24557,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5865241139262464376, guid: 87b03c771a610ba4ca93db97b17c4f5e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b03c771a610ba4ca93db97b17c4f5e, type: 3}
 --- !u!1 &1522213517 stripped
 GameObject:

@@ -7,6 +7,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] protected SpriteRenderer renderer;
     [SerializeField] protected Animator animator;
     [SerializeField] protected ParticleSystem partikel;
+    [SerializeField] protected CapsuleCollider2D collider;
 
     protected bool isJump;
     protected Vector2 directionMove;
@@ -61,13 +62,13 @@ public class PlayerBehaviour : MonoBehaviour
         if (direction > 0)
         {
             renderer.flipX = false;
-            attackDetection.transform.localScale = Vector3.one;
+            attackDetection.transform.localScale = new Vector3(1, 1, 1);
         }
 
         if (direction < 0)
         {
             renderer.flipX = true;
-            attackDetection.transform.localScale = Vector3.one * -1;
+            attackDetection.transform.localScale = new Vector3(-1,1,1);
         }
     }
 
@@ -115,6 +116,18 @@ public class PlayerBehaviour : MonoBehaviour
         if (timeMoveElapsed <= 0) timeMoveElapsed = 0;
     }
 
+    protected void UpdateState()
+    {
+        renderer.sprite = info.ActivePlayerData.defaultSprite;
+        animator.runtimeAnimatorController = info.ActivePlayerData.animator;
+        collider.offset = info.ActivePlayerData.offset;
+        collider.size = info.ActivePlayerData.size;
+
+        animator.SetBool("Idle", true);
+
+        canAttack = info.ActivePlayerData.type == PlayerData.Type.ELDER;
+    }
+
     public void AttackDone()
     {
         canAttack = true;
@@ -123,14 +136,9 @@ public class PlayerBehaviour : MonoBehaviour
     public void GetNextType()
     {
         info.GetNextType();
-        renderer.sprite = info.ActivePlayerData.defaultSprite;
-        animator.runtimeAnimatorController = info.ActivePlayerData.animator;
-
-        animator.SetBool("Idle", true);
+        UpdateState();
 
         partikel.Play();
-
-        canAttack = info.ActivePlayerData.type == PlayerData.Type.ELDER;
     }
 
     public void AddStar()
