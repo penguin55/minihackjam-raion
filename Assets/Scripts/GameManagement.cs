@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 public class GameManagement : MonoBehaviour
 {
     [SerializeField] private GameObject panelPause;
+    [SerializeField] private GameObject panelCongrats;
     private bool gameFreeze;
+    public static bool freezing;
+    public static GameManagement Instance;
 
     // Start is called before the first frame update
     void Start()
     {
+        freezing = false;
+        Instance = this;
         TransitionManager.Instance.FadeOut(StartTheGame);
         AudioManager.Instance.PlayBGM("gameplay");
     }
@@ -46,6 +51,11 @@ public class GameManagement : MonoBehaviour
     public void Quit()
     {
         TransitionManager.Instance.FadeIn(BackToMenu);
+    }
+
+    public void GameOver()
+    {
+        panelCongrats.SetActive(true);
     }
 
     private void StartTheGame()

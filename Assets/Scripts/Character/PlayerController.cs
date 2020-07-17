@@ -16,6 +16,8 @@ public class PlayerController : PlayerBehaviour
 
     void Update()
     {
+        if (GameManagement.freezing) return;
+
         if (withAccelerate) ControllerWithAccelerate();
         else ControllerWithoutAccelerate();
 

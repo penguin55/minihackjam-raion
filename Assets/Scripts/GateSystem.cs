@@ -6,6 +6,8 @@ using UnityEngine;
 public class GateSystem : MonoBehaviour
 {
 
+    public bool endGame;
+    public string targetScene;
     private SpriteRenderer sr;
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -13,11 +15,17 @@ public class GateSystem : MonoBehaviour
         PlayerBehaviour player = collision.gameObject.GetComponent<PlayerBehaviour>();
         if(player.checkStar())
         {
-            Debug.Log("menang");
+            GameManagement.freezing = true;
             sr = collision.gameObject.GetComponent<SpriteRenderer>();
             StartCoroutine("FadeOut");
             player.nullStar();
-            TransitionManager.Instance.FadeIn(toNextLevel);
+            if (endGame) {
+                GameManagement.Instance.GameOver();
+            }
+            else
+            {
+                TransitionManager.Instance.FadeIn(toNextLevel);
+            }
         }
     }
 
@@ -34,7 +42,7 @@ public class GateSystem : MonoBehaviour
 
     void toNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(targetScene);
     }
 
 }
