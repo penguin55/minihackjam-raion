@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Moving
   - Ground
+  - Destructible Object
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Destructible
+  - Player
+  - Weapon
+  - Land
   - 
   - 
   - 

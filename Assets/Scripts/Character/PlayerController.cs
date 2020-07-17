@@ -4,6 +4,7 @@ public class PlayerController : PlayerBehaviour
     [SerializeField] private KeyCode moveRight = KeyCode.D;
     [SerializeField] private KeyCode moveLeft = KeyCode.A;
     [SerializeField] private KeyCode jump = KeyCode.Space;
+    [SerializeField] private KeyCode attack = KeyCode.Q;
 
     private bool withAccelerate = true;
 
@@ -18,7 +19,8 @@ public class PlayerController : PlayerBehaviour
         else ControllerWithoutAccelerate();
 
         if (Input.GetKeyDown(KeyCode.V)) withAccelerate = !withAccelerate;
-
+        
+        ControllAttack();
         LandingCheck();
     }
 
@@ -99,6 +101,14 @@ public class PlayerController : PlayerBehaviour
         }
 
         MoveLinear();
+    }
+
+    void ControllAttack()
+    {
+        if (canAttack && Input.GetKeyDown(attack))
+        {
+            Attack();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

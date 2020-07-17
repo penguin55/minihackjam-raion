@@ -14,9 +14,12 @@ public class PlayerBehaviour : MonoBehaviour
     protected bool onGround;
 
     protected float timeMoveElapsed;
-    protected bool isAccelerating;
+    [SerializeField] protected bool isAccelerating;
     [SerializeField] protected float timeToAccelerate;
     [SerializeField] protected float timeToStop;
+
+    protected bool canAttack;
+    [SerializeField] protected GameObject attackDetection;
 
 
     protected void MoveAccelerate()
@@ -58,12 +61,22 @@ public class PlayerBehaviour : MonoBehaviour
         if (direction > 0)
         {
             renderer.flipX = false;
+            attackDetection.transform.localScale = Vector3.one;
         }
 
         if (direction < 0)
         {
             renderer.flipX = true;
+            attackDetection.transform.localScale = Vector3.one * -1;
         }
+    }
+
+    protected void Attack()
+    {
+        animator.SetTrigger("Attack");
+        // Audio
+        attackDetection.SetActive(true);
+        canAttack = false;
     }
 
     protected void LandingCheck()
@@ -102,6 +115,11 @@ public class PlayerBehaviour : MonoBehaviour
         if (timeMoveElapsed <= 0) timeMoveElapsed = 0;
     }
 
+    public void AttackDone()
+    {
+        canAttack = true;
+    }
+
     public void GetNextType()
     {
         info.GetNextType();
@@ -111,6 +129,8 @@ public class PlayerBehaviour : MonoBehaviour
         animator.SetBool("Idle", true);
 
         partikel.Play();
+
+        canAttack = info.ActivePlayerData.type == PlayerData.Type.ELDER;
     }
 
     public void AddStar()
