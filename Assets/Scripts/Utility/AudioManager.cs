@@ -46,14 +46,41 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBGM(string name)
     {
-        if (bgmClips.Any(e => e.name == name))
+        if (bgmClips.First(e => e.name == name).clip != bgmSource.clip)
         {
-            bgmSource.loop = true;
-            bgmSource.clip = bgmClips.First(e => e.name == name).clip;
-            bgmSource.Play();
+            if (bgmClips.Any(e => e.name == name))
+            {
+                bgmSource.loop = true;
+                bgmSource.clip = bgmClips.First(e => e.name == name).clip;
+                bgmSource.Play();
+            }
+            else
+            {
+                print(name + " Clip doesn't exist!");
+            }
         } else
         {
-            print(name+" Clip doesn't exist!");
+            print(name + " Clip was playing!");
+        }
+    }
+
+    public void StopBGM()
+    {
+        bgmSource.Stop();
+    }
+
+    public void PlayBGMFading(float volumeAdjust)
+    {
+        if (!bgmSource.isPlaying)
+        {
+            bgmSource.Play();
+        }
+
+        bgmSource.volume = volumeAdjust;
+
+        if (volumeAdjust == 0)
+        {
+            bgmSource.Stop();
         }
     }
 }

@@ -31,6 +31,13 @@ public class GameManagement : MonoBehaviour
         panelPause.SetActive(flag);
     }
 
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        gameFreeze = false;
+        panelPause.SetActive(gameFreeze);
+    }
+
     public void Restart()
     {
         TransitionManager.Instance.FadeIn(RestartTheGame);
@@ -38,7 +45,7 @@ public class GameManagement : MonoBehaviour
 
     public void Quit()
     {
-
+        TransitionManager.Instance.FadeIn(BackToMenu);
     }
 
     private void StartTheGame()
@@ -50,6 +57,11 @@ public class GameManagement : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
