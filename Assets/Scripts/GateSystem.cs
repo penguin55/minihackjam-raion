@@ -15,7 +15,6 @@ public class GateSystem : MonoBehaviour
         PlayerBehaviour player = collision.gameObject.GetComponent<PlayerBehaviour>();
         if(player.checkStar())
         {
-            GameManagement.freezing = true;
             sr = collision.gameObject.GetComponent<SpriteRenderer>();
             StartCoroutine("FadeOut");
             player.nullStar();

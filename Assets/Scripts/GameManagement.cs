@@ -14,7 +14,7 @@ public class GameManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        freezing = false;
+        freezing = true;
         Instance = this;
         TransitionManager.Instance.FadeOut(StartTheGame);
         AudioManager.Instance.PlayBGM("gameplay");
@@ -60,7 +60,7 @@ public class GameManagement : MonoBehaviour
 
     private void StartTheGame()
     {
-
+        freezing = false;
     }
 
     private void RestartTheGame()
