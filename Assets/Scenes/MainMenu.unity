@@ -10373,7 +10373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fountain of The <color=#00FFFD>Youth</color>
+  m_Text: The Fountain of <color=#00FFFD>Youth</color>
 --- !u!222 &1870483119
 CanvasRenderer:
   m_ObjectHideFlags: 0
