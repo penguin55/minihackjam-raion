@@ -48,6 +48,8 @@ MonoBehaviour:
   bgmClips:
   - name: gameplay
     clip: {fileID: 8300000, guid: 7e6d2d30b410e3340ab3eed95633ac0a, type: 3}
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: acf97867ce55b354f92d8c0924ffa23b, type: 3}
   sfxClips:
   - name: Walk
     clip: {fileID: 8300000, guid: b682c470ca021f14faa811ed2dcc540e, type: 3}
@@ -59,6 +61,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0b6976d2acdba944c8bd5d64dc197f4b, type: 3}
   - name: encok
     clip: {fileID: 8300000, guid: a90a0d2063d7dc34998a2df5474ed9c0, type: 3}
+  - name: Button
+    clip: {fileID: 8300000, guid: 3eb325f88ba70fc4e9a0198fe5447658, type: 3}
   bgmSource: {fileID: 4640007898943496016}
   sfxSource: {fileID: 4640007898943496111}
 --- !u!82 &4640007898943496016

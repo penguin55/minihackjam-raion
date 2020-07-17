@@ -1860,7 +1860,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu music by <color=red>Eric Matyas</color>
+  m_Text: In Game music by <color=red>Darren Curtis</color>
 --- !u!222 &913326682
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     private void Start()
     {
-        AudioManager.Instance.PlayBGM("gameplay");
+        AudioManager.Instance.PlayBGM("MainMenu");
         TransitionManager.Instance.FadeOut(null);
     }
 
@@ -27,6 +27,6 @@ public class MainMenuManager : MonoBehaviour
     private void StartLevelGame()
     {
         Debug.Log("Test");
-        SceneManager.LoadScene("Ngetest");
+        SceneManager.LoadScene("Introduction");
     }
 }
