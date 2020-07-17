@@ -17,13 +17,13 @@ public class GateSystem : MonoBehaviour
             sr = collision.gameObject.GetComponent<SpriteRenderer>();
             StartCoroutine("FadeOut");
             player.nullStar();
-            Invoke("toNextLevel", 1.5f);
+            TransitionManager.Instance.FadeIn(toNextLevel);
         }
     }
 
     IEnumerator FadeOut()
     {
-        for (float i = 1f; i >= 0.05f; i -= 0.05f)
+        for (float i = 1f; i >= 0.00f; i -= 0.05f)
         {
             Color c = sr.material.color;
             c.a = i;
