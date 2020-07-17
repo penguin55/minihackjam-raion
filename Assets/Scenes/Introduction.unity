@@ -8414,6 +8414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32ad4a75c0f7f14e9b8a71adbedd99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGame: 0
+  targetScene: Level1
 --- !u!61 &688031688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19372,6 +19374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPause: {fileID: 580451938}
+  panelCongrats: {fileID: 0}
 --- !u!4 &1134658202
 Transform:
   m_ObjectHideFlags: 0
