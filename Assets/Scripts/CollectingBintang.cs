@@ -5,7 +5,10 @@ using UnityEngine;
 public class CollectingBintang : MonoBehaviour
 {
     public PlayerData.Type usiaBintang;
-    
+    [SerializeField] protected ParticleSystem partikel;
+    public SpriteRenderer sprite;
+    public Collider2D collider;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -15,7 +18,10 @@ public class CollectingBintang : MonoBehaviour
             {
                 player.AddStar();
                 AudioManager.Instance.PlaySFX("Collect");
-                Destroy(this.gameObject);
+                partikel.Play();
+                sprite.enabled = false;
+                collider.enabled = false;
+                Destroy(this.gameObject, 1.14f);
             }
         }
     }
