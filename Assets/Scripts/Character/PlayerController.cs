@@ -38,9 +38,10 @@ public class PlayerController : PlayerBehaviour
 
     void ControllerWithAccelerate()
     {
-        if (Input.GetKeyDown(jump) && !onJump)
+        if (Input.GetKeyDown(jump) && !onJump && onGround)
         {
             isJump = true;
+            onGround = false;
         }
 
         if (Input.GetKey(moveLeft))
@@ -84,9 +85,10 @@ public class PlayerController : PlayerBehaviour
 
     void ControllerWithoutAccelerate()
     {
-        if (Input.GetKeyDown(jump))
+        if (Input.GetKeyDown(jump) && !onJump)
         {
             isJump = true;
+            onGround = false;
         }
 
         directionMove = Vector2.zero;
@@ -121,7 +123,7 @@ public class PlayerController : PlayerBehaviour
             this.transform.parent = collision.collider.transform;
         }
 
-        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving") || collision.collider.tag.Equals("Destructible Object"))
+        if ((collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving")))
         {
             onGround = true;
         }
@@ -134,7 +136,7 @@ public class PlayerController : PlayerBehaviour
             this.transform.parent = null;
         }
 
-        if (collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving") || collision.collider.tag.Equals("Destructible Object"))
+        if ((collision.gameObject.CompareTag("Ground") || collision.collider.tag.Equals("Moving")))
         {
             onGround = false;
         }

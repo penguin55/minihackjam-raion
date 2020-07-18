@@ -285,8 +285,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 60
     starCollects: 0
-    offset: {x: 0, y: -0.5273053}
-    size: {x: 0.5059483, y: 0.9055094}
+    offset: {x: -0.03171444, y: -0.569056}
+    size: {x: 0.4268064, y: 1.037005}
   - type: 1
     defaultSprite: {fileID: 2991930845889900792, guid: e77e5ce2b4c9a824c967884b7ceb3249,
       type: 3}
@@ -295,8 +295,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 90
     starCollects: 0
-    offset: {x: 0.05325913, y: 0.05854559}
-    size: {x: 0.6124666, y: 2.077211}
+    offset: {x: 0.00779748, y: 0}
+    size: {x: 0.841681, y: 2.232239}
   - type: 2
     defaultSprite: {fileID: -8655654591688036906, guid: d80b5003272555f498d08ca1c835ddd7,
       type: 3}
@@ -305,8 +305,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 0
     starCollects: 0
-    offset: {x: -0.01936698, y: -0.06249785}
-    size: {x: 0.7577188, y: 1.835124}
+    offset: {x: -0.01936698, y: -0.1474581}
+    size: {x: 0.7873521, y: 2.005045}
 --- !u!114 &5865241139262464359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,9 +325,10 @@ MonoBehaviour:
   animator: {fileID: 5865241139262464377}
   partikel: {fileID: 1714930893241505808}
   collider: {fileID: 966046884}
-  isAccelerating: 1
+  timeMoveElapsed: 0
+  isAccelerating: 0
   timeToAccelerate: 1
-  timeToStop: 0.3
+  timeToStop: 0.4
   attackDetection: {fileID: 5865241140225496126}
   moveRight: 100
   moveLeft: 97
@@ -365,8 +366,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01936698, y: -0.062497854}
-  m_Size: {x: 0.7577188, y: 1.8351245}
+  m_Offset: {x: 0.0077974796, y: -0.033861518}
+  m_Size: {x: 0.841681, y: 2.2322385}
   m_Direction: 0
 --- !u!1001 &803700303417116047
 PrefabInstance:

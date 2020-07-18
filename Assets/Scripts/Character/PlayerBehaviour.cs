@@ -14,7 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     protected bool onJump;
     protected bool onGround;
 
-    protected float timeMoveElapsed;
+    [SerializeField]protected float timeMoveElapsed;
     [SerializeField] protected bool isAccelerating;
     [SerializeField] protected float timeToAccelerate;
     [SerializeField] protected float timeToStop;
@@ -82,7 +82,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     protected void LandingCheck()
     {
-        if (onGround && onJump && rigid.velocity.y == 0)
+        if (onGround && onJump)
         {
             onJump = false;
             animator.SetTrigger("Landing");
