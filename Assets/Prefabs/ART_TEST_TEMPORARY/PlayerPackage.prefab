@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -319,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPause: {fileID: 9184151808728763592}
+  panelCongrats: {fileID: 0}
 --- !u!1 &9184151809256596869
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +411,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -675,6 +678,7 @@ TrailRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -834,10 +838,11 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -913,6 +918,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 60
     starCollects: 0
+    offset: {x: 0, y: 0}
+    size: {x: 0, y: 0}
   - type: 1
     defaultSprite: {fileID: 2991930845889900792, guid: e77e5ce2b4c9a824c967884b7ceb3249,
       type: 3}
@@ -921,6 +928,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 90
     starCollects: 0
+    offset: {x: 0, y: 0}
+    size: {x: 0, y: 0}
   - type: 2
     defaultSprite: {fileID: -8655654591688036906, guid: d80b5003272555f498d08ca1c835ddd7,
       type: 3}
@@ -929,6 +938,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 0
     starCollects: 0
+    offset: {x: 0, y: 0}
+    size: {x: 0, y: 0}
 --- !u!114 &9184151809731780690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,11 +957,16 @@ MonoBehaviour:
   renderer: {fileID: 9184151809731780687}
   animator: {fileID: 9184151809731780684}
   partikel: {fileID: 4169634357866993957}
+  collider: {fileID: 0}
+  timeMoveElapsed: 0
+  isAccelerating: 0
   timeToAccelerate: 1
   timeToStop: 0.3
+  attackDetection: {fileID: 0}
   moveRight: 100
   moveLeft: 97
   jump: 32
+  attack: 113
 --- !u!61 &9184151809731780685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5701,6 +5717,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5810,6 +5827,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6006,6 +6024,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6140,6 +6159,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
