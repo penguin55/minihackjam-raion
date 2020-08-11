@@ -21,20 +21,31 @@
         "com.unity.2d.tilemap": "1.0.0"
       }
     },
+<<<<<<< HEAD
     "com.unity.collab-proxy": {
       "version": "1.2.16",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
+=======
     "com.unity.ext.nunit": {
       "version": "1.0.0",
+>>>>>>> 40398d865d1402eafc9a6bbb2bbe3810eedb4a50
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+    "com.unity.ext.nunit": {
+      "version": "1.0.0",
+=======
+    "com.unity.ide.vscode": {
+      "version": "1.2.1",
+>>>>>>> 40398d865d1402eafc9a6bbb2bbe3810eedb4a50
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+<<<<<<< HEAD
     "com.unity.ide.rider": {
       "version": "1.1.4",
       "depth": 0,
@@ -49,6 +60,34 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
+=======
+    "com.unity.render-pipelines.core": {
+      "version": "7.3.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.render-pipelines.universal": {
+      "version": "7.3.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "7.3.1",
+        "com.unity.shadergraph": "7.3.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.shadergraph": {
+      "version": "7.3.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "7.3.1"
+      },
+>>>>>>> 40398d865d1402eafc9a6bbb2bbe3810eedb4a50
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {

@@ -51,6 +51,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -130,6 +131,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 90
     starCollects: 0
+    offset: {x: 0, y: 0}
+    size: {x: 0, y: 0}
   - type: 1
     defaultSprite: {fileID: 2991930845889900792, guid: e77e5ce2b4c9a824c967884b7ceb3249,
       type: 3}
@@ -138,6 +141,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 60
     starCollects: 0
+    offset: {x: 0, y: 0}
+    size: {x: 0, y: 0}
   - type: 2
     defaultSprite: {fileID: -8655654591688036906, guid: d80b5003272555f498d08ca1c835ddd7,
       type: 3}
@@ -146,6 +151,8 @@ MonoBehaviour:
     movementSpeed: 5
     jumpPower: 0
     starCollects: 0
+    offset: {x: 0, y: 0}
+    size: {x: 0, y: 0}
 --- !u!114 &7878331489590295234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,11 +169,17 @@ MonoBehaviour:
   rigid: {fileID: 7878331489590295232}
   renderer: {fileID: 7878331489590295263}
   animator: {fileID: 7878331489590295260}
+  partikel: {fileID: 0}
+  collider: {fileID: 0}
+  timeMoveElapsed: 0
+  isAccelerating: 0
   timeToAccelerate: 1
   timeToStop: 0.3
+  attackDetection: {fileID: 0}
   moveRight: 100
   moveLeft: 97
   jump: 32
+  attack: 113
 --- !u!61 &7878331489590295261
 BoxCollider2D:
   m_ObjectHideFlags: 0
