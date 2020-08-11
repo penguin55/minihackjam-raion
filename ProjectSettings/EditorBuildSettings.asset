@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: f7dfed2b5d6b2de418c7740bb3e63808
+  - enabled: 1
+    path: Assets/Scenes/Ngetest.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/testPortal.unity
+    guid: 22f8acae59494834ba823da426ee405b
   m_configObjects: {}

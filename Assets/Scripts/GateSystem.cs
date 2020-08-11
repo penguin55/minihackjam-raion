@@ -12,6 +12,7 @@ public class GateSystem : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        /*
         PlayerBehaviour player = collision.gameObject.GetComponent<PlayerBehaviour>();
         if(player.checkStar())
         {
@@ -25,6 +26,17 @@ public class GateSystem : MonoBehaviour
             {
                 TransitionManager.Instance.FadeIn(toNextLevel);
             }
+        }
+        */
+        sr = collision.gameObject.GetComponent<SpriteRenderer>();
+        StartCoroutine("FadeOut");
+        if (endGame)
+        {
+            GameManagement.Instance.GameOver();
+        }
+        else
+        {
+            TransitionManager.Instance.FadeIn(toNextLevel);
         }
     }
 
