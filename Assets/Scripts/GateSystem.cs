@@ -9,7 +9,7 @@ public class GateSystem : MonoBehaviour
     public bool endGame;
     public string targetScene;
     private SpriteRenderer sr;
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         /*
@@ -36,7 +36,9 @@ public class GateSystem : MonoBehaviour
         }
         else
         {
-            TransitionManager.Instance.FadeIn(toNextLevel);
+            toNextLevel();
+
+            //TransitionManager.Instance.FadeIn(toNextLevel);
         }
     }
 
