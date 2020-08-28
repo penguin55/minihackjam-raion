@@ -41,10 +41,10 @@ Tilemap:
   m_GameObject: {fileID: 629582911031671254}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -1, y: 1, z: 0}
+  - first: {x: 1, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
+      m_TileIndex: 1
       m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -52,8 +52,10 @@ Tilemap:
       m_AllTileFlags: 1073741826
   m_AnimatedTiles: {}
   m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 00ef02f03e44e154fb7344d639e4e120, type: 2}
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -68,7 +70,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 5288172715777253050, guid: ff6da8edc37ea6f44b2303a8058a6079,
+    m_Data: {fileID: -7174805978906179015, guid: ff6da8edc37ea6f44b2303a8058a6079,
       type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1
@@ -174,7 +176,7 @@ GameObject:
   - component: {fileID: 7416039115483759663}
   - component: {fileID: 2174234193447064983}
   m_Layer: 31
-  m_Name: TestPalette
+  m_Name: Dirt2Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
