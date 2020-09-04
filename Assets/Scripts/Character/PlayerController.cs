@@ -127,6 +127,20 @@ public class PlayerController : PlayerBehaviour
         {
             onGround = true;
         }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("restart level");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("restart level");
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
