@@ -19,7 +19,7 @@ MonoBehaviour:
   m_HDREmulationScale: 1
   m_LightBlendStyles:
   - enabled: 0
-    name: Default
+    name: Multiply
     maskTextureChannel: 0
     renderTextureScale: 1
     blendMode: 1
