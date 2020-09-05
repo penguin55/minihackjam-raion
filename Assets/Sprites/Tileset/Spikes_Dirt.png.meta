@@ -11,6 +11,51 @@ TextureImporter:
   - first:
       213: 4627759144598829369
     second: Spikes_Dirt_2
+  - first:
+      213: 8227537788901124342
+    second: Spikes_Dirt_0
+  - first:
+      213: 3112301365209455553
+    second: Spikes_Dirt_1
+  - first:
+      213: -7013025220900118468
+    second: Spikes_Dirt_2
+  - first:
+      213: 617197382867369411
+    second: Spikes_Dirt_3
+  - first:
+      213: 259877451959346962
+    second: Spikes_Dirt_4
+  - first:
+      213: 3254369561717444509
+    second: Spikes_Dirt_5
+  - first:
+      213: -5890492401486747163
+    second: Spikes_Dirt_6
+  - first:
+      213: 8003423765458776176
+    second: Spikes_Dirt_7
+  - first:
+      213: 4590420367789437707
+    second: Spikes_Dirt_8
+  - first:
+      213: -7986002980646952505
+    second: Spikes_Dirt_9
+  - first:
+      213: 9208316799838951776
+    second: Spikes_Dirt_10
+  - first:
+      213: -2994726659105184083
+    second: Spikes_Dirt_11
+  - first:
+      213: -940362426148785336
+    second: Spikes_Dirt_3
+  - first:
+      213: -1144193026655903678
+    second: Spikes_Dirt_4
+  - first:
+      213: 5529995605239503165
+    second: Spikes_Dirt_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,6 +145,195 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8ed8317061e2270800000000000000
+      internalID: 8227537788901124342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbd54b1a9d113b20800000000000000
+      internalID: 3112301365209455553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30a46bd7babcae90800000000000000
+      internalID: -7013025220900118468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843f64d0b5923f2f0800000000000000
+      internalID: -940362426148785336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24022b321820f10f0800000000000000
+      internalID: -1144193026655903678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3995cb24bd7ebc40800000000000000
+      internalID: 5529995605239503165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9ae39be54c04ea0800000000000000
+      internalID: -5890492401486747163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070f61fb28fd11f60800000000000000
+      internalID: 8003423765458776176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03becfd00374bf30800000000000000
+      internalID: 4590420367789437707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_Dirt_9
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 24
         height: 24
@@ -110,14 +344,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be06af08b9e1ca570800000000000000
-      internalID: 8479185851664457963
+      spriteID: 7c1e35bc9940c2190800000000000000
+      internalID: -7986002980646952505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes_Dirt_1
+      name: Spikes_Dirt_10
       rect:
         serializedVersion: 2
         x: 24
@@ -131,14 +365,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2032d6685d67fda20800000000000000
-      internalID: 3089318528854860546
+      spriteID: 06999a977538acf70800000000000000
+      internalID: 9208316799838951776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes_Dirt_2
+      name: Spikes_Dirt_11
       rect:
         serializedVersion: 2
         x: 48
@@ -152,8 +386,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 939f0ef4c6a193040800000000000000
-      internalID: 4627759144598829369
+      spriteID: da6a4a468f79076d0800000000000000
+      internalID: -2994726659105184083
       vertices: []
       indices: 
       edges: []
