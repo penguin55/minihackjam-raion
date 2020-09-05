@@ -20,7 +20,6 @@ public class FallingPlatform : FallingPlatformTriggerer
     private void letsFall()
     {
         StartCoroutine(falling());
-        Debug.Log("enter");
     }
 
     IEnumerator falling()
@@ -28,6 +27,5 @@ public class FallingPlatform : FallingPlatformTriggerer
         yield return new WaitForSeconds(timeToFall);
         FallingPlatform parentGO = gameObject.GetComponentInParent<FallingPlatform>();
         parentGO.gameObject.SetActive(false);
-        Debug.Log("hancur");
     }
 }
