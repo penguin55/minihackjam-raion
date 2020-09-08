@@ -6,7 +6,8 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] protected Rigidbody2D rigid;
     [SerializeField] protected SpriteRenderer renderer;
     [SerializeField] protected Animator animator;
-    [SerializeField] protected ParticleSystem partikel;
+    [SerializeField] protected ParticleSystem powerParticle;
+    [SerializeField] protected ParticleSystem dustParticle;
     [SerializeField] protected CapsuleCollider2D collider;
 
     protected bool isJump;
@@ -14,7 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
     protected bool onJump;
     protected bool onGround;
 
-    [SerializeField]protected float timeMoveElapsed;
+    [SerializeField] protected float timeMoveElapsed;
     [SerializeField] protected bool isAccelerating;
     [SerializeField] protected float timeToAccelerate;
     [SerializeField] protected float timeToStop;
@@ -47,7 +48,8 @@ public class PlayerBehaviour : MonoBehaviour
         onJump = true;
         rigid.AddForce(Vector2.up * info.ActivePlayerData.jumpPower, ForceMode2D.Impulse);
         animator.SetTrigger("Jump");
-        if(info.ActivePlayerData.type == PlayerData.Type.ELDER)
+        dustParticle.Play();
+        if (info.ActivePlayerData.type == PlayerData.Type.ELDER)
         {
             AudioManager.Instance.PlaySFX("encok");
         }
@@ -62,13 +64,13 @@ public class PlayerBehaviour : MonoBehaviour
         if (direction > 0)
         {
             renderer.flipX = false;
-            attackDetection.transform.localScale = new Vector3(1, 1, 1);
+            attackDetection.transform.localScale = new Vector3(1, 1, 1);    
         }
 
         if (direction < 0)
         {
             renderer.flipX = true;
-            attackDetection.transform.localScale = new Vector3(-1,1,1);
+            attackDetection.transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 
@@ -96,7 +98,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (accelerate == 0)
         {
             animator.SetBool("Idle", true);
-        } else
+        }
+        else
         {
             animator.SetBool("Idle", false);
         }
@@ -138,7 +141,7 @@ public class PlayerBehaviour : MonoBehaviour
         info.GetNextType();
         UpdateState();
 
-        partikel.Play();
+        powerParticle.Play();
     }
 
     public void AddStar()
