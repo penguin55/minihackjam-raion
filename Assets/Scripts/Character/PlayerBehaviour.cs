@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected ParticleSystem powerParticle;
     [SerializeField] protected ParticleSystem dustParticle;
+    [SerializeField] protected ParticleSystem windTrail;
     [SerializeField] protected CapsuleCollider2D collider;
 
     protected bool isJump;
@@ -49,6 +50,7 @@ public class PlayerBehaviour : MonoBehaviour
         rigid.AddForce(Vector2.up * info.ActivePlayerData.jumpPower, ForceMode2D.Impulse);
         animator.SetTrigger("Jump");
         dustParticle.Play();
+        windTrail.Play();
         if (info.ActivePlayerData.type == PlayerData.Type.ELDER)
         {
             AudioManager.Instance.PlaySFX("encok");
